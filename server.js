@@ -9,11 +9,13 @@ const app = express()
 
 app.use(bodyParser.json())
 app.use(logger('dev'))
-app.use(errorhandler())
+
 
 // Routes
 
 app.use('/accounts', accounts)
+
+app.use(errorhandler())
 
 // Initialize
 
